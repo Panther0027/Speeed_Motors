@@ -1,0 +1,14 @@
+services:
+  app-backend:
+    image: panther27/app-backend:1.0.0
+    container_name: app-backend-container
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+
+  app-frontend:
+    image: panther27/app-frontend:1.0.0
+    container_name: app-frontend-container
+    ports:
+      - "3000:80"
